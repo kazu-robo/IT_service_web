@@ -1023,20 +1023,17 @@
       order:2;
       max-width:360px;
       margin:0 auto;
-      aspect-ratio:1.25; /* スマホ時はもう少し縦に余裕 */
+      position:static;
+      display:flex;
+      flex-direction:column;
+      gap:0.75rem;
+      aspect-ratio:unset;
     }
-    /* カードの位置をスマホ用に再調整して重ならないように */
-    .illust-card-1{
-      top:0;left:0;
-      width:68%;
-    }
-    .illust-card-2{
-      top:36%;right:0;
-      width:62%;
-    }
-    .illust-card-3{
-      bottom:0;left:5%;
-      width:65%;
+    /* スマホでは絶対配置を解除して縦並びに */
+    .illust-card{
+      position:static;
+      width:100% !important;
+      animation:none;
     }
     .hero-text{order:1;}
     .hero-actions{flex-direction:column;align-items:stretch;}
